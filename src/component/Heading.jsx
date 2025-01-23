@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-export default function Heading(props) {
+export default function Heading({ heading }) {
   return (
-    <div>
-        <h1>{props.heading}</h1>
+    <div className="heading-container">
+      <h1 className="heading">{heading}</h1>
     </div>
-  )
+  );
 }

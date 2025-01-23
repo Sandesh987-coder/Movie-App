@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react"
 
-export default function SearchBox(props) {
+export default function SearchBox({ value, name, onChange }) {
   return (
-    <div >
-        <input type="text" placeholder='Search the movie' className='search' value={props.value} name={props.name} onChange={props.onChange}></input>
+    <div className="search-container">
+      <input
+        type="text"
+        placeholder="Search for movies..."
+        className="search-input"
+        value={value}
+        name={name}
+        onChange={onChange}
+      />
     </div>
   )
 }
+
