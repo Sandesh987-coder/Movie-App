@@ -3,6 +3,11 @@ import "./App2.css"
 import MovieList from "./component/MovieList"
 import Heading from "./component/Heading"
 import SearchBox from "./component/SearchBox"
+import FavouritesList from "./component/FavouritesList"; // Path is correct
+import { FavouritesProvider } from "./component/FavouritesContext"; // Path is correct
+
+
+
 
 function App() {
   const [movies, setMovies] = useState([])
@@ -37,6 +42,9 @@ function App() {
   }, [search.Title])
 
   return (
+    <FavouritesProvider>
+
+
     <div className="container">
       <div className="content">
         <div className="movie-container">
@@ -45,9 +53,11 @@ function App() {
             <SearchBox value={search.Title} name="Title" onChange={onChange} />
           </div>
           <MovieList movies={movies} />
+          <FavouritesList/>
         </div>
       </div>
     </div>
+    </FavouritesProvider>
   )
 }
 
