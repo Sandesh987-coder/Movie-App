@@ -18,6 +18,7 @@ const FavouritesList = () => {
               />
             )}
             <h3>{movie.Title}</h3>
+            <button>Remove from favourite</button>
           </div>
         ))}
       </div>
