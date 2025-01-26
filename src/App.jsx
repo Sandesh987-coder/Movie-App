@@ -16,7 +16,7 @@ function App() {
   const getMovieRequest = async () => {
     if (search.Title.trim() === "") return
 
-    const url = `http://www.omdbapi.com/?s=${search.Title}&apikey=6a320492`
+    const url = `https://www.omdbapi.com/?s=${search.Title}&apikey=6a320492`
     try {
       const res = await fetch(url)
       const jsonres = await res.json()
