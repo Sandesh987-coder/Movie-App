@@ -6,9 +6,6 @@ import SearchBox from "./component/SearchBox"
 import FavouritesList from "./component/FavouritesList"; // Path is correct
 import { FavouritesProvider } from "./component/FavouritesContext"; // Path is correct
 
-
-
-
 function App() {
   const [movies, setMovies] = useState([])
   const [search, setSearch] = useState({ Title: "" })
